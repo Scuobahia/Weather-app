@@ -22,9 +22,9 @@ function displayResults (weather){
     console.log(weather);
     let city = document.querySelector('.location .city');
     city.innerHTML = `${weather.name}, ${weather.sys.country}`;
-    
-    var a = moment().toString();
-    document.getElementById('date').innerHTML = a;
+
+    // var a = moment().toString();
+    // document.getElementById('date').innerHTML = a;
 
     let temp = document.querySelector('.current .temp');
     temp.innerHTML = `${Math.round(weather.main.temp)}<span>°F</span>`;

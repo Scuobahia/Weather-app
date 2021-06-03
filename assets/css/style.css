@@ -4,7 +4,7 @@ body {
 }
 .card{
     margin: auto;
-    margin-top: 100px;
+    margin-top: 50px;
     height: 800px;
     background-color: hsl(235, 28%, 18%);
     color: white;
@@ -24,7 +24,7 @@ body {
     font-size: 32px;
 }
 .current .hi-low {
-    font-size: 20px;
+    font-size: 30px;
 }
 /* End of Options Styling */
 .card-img-top {
@@ -46,4 +46,17 @@ ul {
     border-radius: 10px;
     border: none;
     font-size: 3vh;
+}
+/* Indepth look styles */
+.depth {
+    height: 150px;
+    text-align: center;
+    font-size: 4vh;
+    background-color: rgb(0, 253, 110);
+}
+/* 5 day forecast containers styling */
+.forecast {
+    height: 200px;
+    background-color: rgb(226, 105, 24);
+   
 }
