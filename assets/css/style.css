@@ -4,9 +4,29 @@ body {
 }
 .card{
     margin: auto;
-    margin-top: 150px;
-    height: 700px;
+    margin-top: 100px;
+    height: 800px;
+    background-color: hsl(235, 28%, 18%);
+    color: white;
+    font-family: "Caveat";
 }
+/* Options Styling */
+.location .city {
+    font-size: 32px;
+}
+.location .date {
+    font-size: 20px;
+}
+.current .temp {
+    font-size: 8vh;
+}
+.current .weather {
+    font-size: 32px;
+}
+.current .hi-low {
+    font-size: 20px;
+}
+/* End of Options Styling */
 .card-img-top {
     height: 400px;
     padding: 10px;
@@ -17,9 +37,13 @@ body {
 
 }
 ul {
-    height: 240px;
+    height: 330px;
     text-align: center;
 }
 .input-box {
     width: 368px;
+    background-color: rgb(201, 247, 0);
+    border-radius: 10px;
+    border: none;
+    font-size: 3vh;
 }
