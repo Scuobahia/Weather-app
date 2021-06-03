@@ -22,5 +22,24 @@ function displayResults (weather){
     console.log(weather);
     let city = document.querySelector('.location .city');
     city.innerHTML = `${weather.name}, ${weather.sys.country}`;
+    
+    var a = moment().toString();
+    document.getElementById('date').innerHTML = a;
+
+    let temp = document.querySelector('.current .temp');
+    temp.innerHTML = `${Math.round(weather.main.temp)}<span>°F</span>`;
+
+    let weather_el = document.querySelector(`.current .weather`);
+    weather_el.innerHTML = weather.weather[0].main;
+    
+    let hilow = document.querySelector('.hi-low');
+    hilow.innerHTML = `${weather.main.temp_min}°F / ${weather.main.temp_max}°F`;
+ 
+
   
 }
+
+
+// var x = document.querySelector('location .date');
+// var Now = moment().format('dddd d, MMMM YYYY');
+// x.innerHTML = Now;
