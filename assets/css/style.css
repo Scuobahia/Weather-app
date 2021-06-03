@@ -1,3 +1,19 @@
 body {
     background-color: black;
+    
+}
+.card{
+    margin: auto;
+    margin-top: 150px;
+    height: 700px;
+}
+.card-img-top {
+    height: 400px;
+}
+.card-body {
+    height: 5px;
+}
+ul {
+    height: 240px;
+    text-align: center;
 }
