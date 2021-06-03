@@ -9,11 +9,17 @@ body {
 }
 .card-img-top {
     height: 400px;
+    padding: 10px;
+    border-radius: 5%;
 }
 .card-body {
     height: 5px;
+
 }
 ul {
     height: 240px;
     text-align: center;
+}
+.input-box {
+    width: 368px;
 }
