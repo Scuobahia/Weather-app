@@ -43,9 +43,9 @@ function displayResults (weather){
 
     let feel = document.querySelector('.feel');
     feel.innerHTML = `${weather.main.feels_like} <span>°F</span>`;
-    
+    // Needs Work
     let uv = document.querySelector('.uv');
-    uv.innerHTML = `${weather.uvi}`;
+    uv.innerHTML = `${weather.main.uvi}`;
 }
 
 
