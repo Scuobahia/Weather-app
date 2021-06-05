@@ -1,7 +1,17 @@
 var api = {
     key: "73cf05e1772b6f32d41c086ccbb12510",
     baseurl: "https://api.openweathermap.org/data/2.5/"
-}   
+} 
+var API_KEY = "73cf05e1772b6f32d41c086ccbb12510";
+getWeatherData()
+function getWeatherData (){
+    navigator.geolocation.getCurrentPosition((success) =>{
+        console.log(success);
+        let {latitude, longitude} = success.coords;
+        fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&exclude=hourly,minutely&appid=${API_KEY}`).then(res =>res.json()).then(data => {
+            console.log(data)
+        })
+})
 
 var searchbox = document.querySelector('.search-box');
 searchbox.addEventListener('keypress', setQuery);
@@ -45,5 +55,4 @@ function displayResults (weather){
 
     let feel = document.querySelector('.feel');
     feel.innerHTML = `${Math.round(weather.main.feels_like)} <span>°F</span>`;
-}
-
+}}
