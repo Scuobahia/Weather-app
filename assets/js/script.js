@@ -1,7 +1,8 @@
 var api = {
     key: "73cf05e1772b6f32d41c086ccbb12510",
     baseurl: "https://api.openweathermap.org/data/2.5/"
-}
+}   
+
 var searchbox = document.querySelector('.search-box');
 searchbox.addEventListener('keypress', setQuery);
 
@@ -23,8 +24,9 @@ function displayResults (weather){
     let city = document.querySelector('.location .city');
     city.innerHTML = `${weather.name}, ${weather.sys.country}`;
 
-    // var a = moment().toString();
-    // document.getElementById('date').innerHTML = a;
+    var a = moment().format('dddd d, MMMM YYYY').toString();
+    document.getElementById('date').innerHTML = a;
+    console.log(moment);
 
     let temp = document.querySelector('.current .temp');
     temp.innerHTML = `${Math.round(weather.main.temp)}<span>°F</span>`;
@@ -33,22 +35,15 @@ function displayResults (weather){
     weather_el.innerHTML = weather.weather[0].main;
     
     let hilow = document.querySelector('.hi-low');
-    hilow.innerHTML = `${weather.main.temp_min}°F / ${weather.main.temp_max}°F`;
+    hilow.innerHTML = `${Math.round(weather.main.temp_min)}°F / ${Math.round(weather.main.temp_max)}°F`;
 
     let wind = document.querySelector('.wind');
-    wind.innerHTML = `${weather.wind.speed} <span>MPH</span>`;
+    wind.innerHTML = `${Math.round(weather.wind.speed)} <span>MPH</span>`;
 
     let humidity = document.querySelector('.humidity');
     humidity.innerHTML = `${weather.main.humidity} <span>%</span>`;
 
     let feel = document.querySelector('.feel');
-    feel.innerHTML = `${weather.main.feels_like} <span>°F</span>`;
-    // Needs Work
-    let uv = document.querySelector('.uv');
-    uv.innerHTML = `${weather.main.uvi}`;
+    feel.innerHTML = `${Math.round(weather.main.feels_like)} <span>°F</span>`;
 }
 
-
-// var x = document.querySelector('location .date');
-// var Now = moment().format('dddd d, MMMM YYYY');
-// x.innerHTML = Now;
