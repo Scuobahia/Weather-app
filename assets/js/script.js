@@ -18,9 +18,36 @@ function getWeatherData(weather) {
                 let uv = document.querySelector('#uvi');
                 uv.innerHTML = `${data.current.uvi}`
                 console.log(data)
-                let temp =document.querySelector('.current-2 .temp-2');
-                temp.innerHTML = `${data.daily[1].temp.day} <span>°F</span>`;
+                // Day 1
+                let temp2 = document.querySelector('.current-2 .temp-2');
+                temp2.innerHTML = `${Math.round(data.daily[1].temp.day)} <span>°F</span>`;
+
+                let now2 = document.querySelector('.current-2 .now-2');
+                now2.innerHTML = `${data.daily[1].weather[0].main}`
+
+                let feel2 = document.querySelector('.current-2 .feel-2');
+                feel2.innerHTML = `${Math.round(data.daily[1].feels_like.day)} <span>°F</span>`;
+
+                let humid2 = document.querySelector('.current-2 .humid-2');
+                humid2.innerHTML = `${data.daily[1].humidity}<span>%</span>`
                 
+                let uvi2 = document.querySelector('.current-2 .uvi-2');
+                uvi2.innerHTML = `${data.daily[1].uvi}`;
+                // Day 2
+                let temp3 = document.querySelector('.current-3 .temp-3');
+                temp3.innerHTML = `${Math.round(data.daily[2].temp.day)} <span>°F</span>`;
+
+                let now3 = document.querySelector('.current-3 .now-3');
+                now3.innerHTML = `${data.daily[2].weather[0].main}`
+
+                let feel3 = document.querySelector('.current-3 .feel-3');
+                feel3.innerHTML = `${Math.round(data.daily[2].feels_like.day)} <span>°F</span>`;
+
+                let humid3 = document.querySelector('.current-3 .humid-3');
+                humid3.innerHTML = `${data.daily[2].humidity}<span>%</span>`
+                
+                let uvi3 = document.querySelector('.current-3 .uvi-3');
+                uvi3.innerHTML = `${data.daily[2].uvi}`;
             })
 }
 var searchbox = document.querySelector('.search-box');
